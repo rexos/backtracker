@@ -1,6 +1,7 @@
 = backtracker
 
-Description goes here.
+This is only a test gem.
+Ruby gem which allows you to take user or someone else, using your application, back to a previous path or url if needed
 
 == Contributing to backtracker
  
