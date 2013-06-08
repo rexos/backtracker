@@ -3,6 +3,28 @@
 This is only a test gem.
 Ruby gem which allows you to take user or someone else, using your application, back to a previous path or url if needed
 
+== Installation
+
+ In your Gemfile : 
+     gem 'backtracker'
+ and then run the command 
+     bundle install
+     
+== Usage
+
+  In your controller you can save your "location" by using method : 
+     
+     store_current_path( path = nil )
+  
+  if you do not specify a path or url backtracker takes the current one automatically.
+  If you're using CanCan gem ( for example ) you can rescue application from an access denied error like this:
+  
+     rescue_from CanCan::AccessDenied do |exception|
+         restore_previous_path
+     end
+   
+  Use it this way on exceptions like that.
+
 == Contributing to backtracker
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
