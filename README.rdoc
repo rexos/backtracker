@@ -5,19 +5,20 @@ Ruby gem which allows you to take user or someone else, using your application, 
 
 == Installation
 
- In your Gemfile : 
+In your Gemfile : 
      gem 'backtracker'
- and then run the command 
+and then run the command 
      bundle install
      
 == Usage
 
-In your controller you can save your "location" by using method : 
+In your controller action you can save your "location" by using method : 
      
      store_current_path( path = nil )
   
 if you do not specify a path or url backtracker takes the current one automatically.
-If you're using CanCan gem ( for example ) you can rescue application from an access denied error like this:
+If you're using CanCan gem ( for example ) you can rescue application from an 
+access denied error like this:
   
      rescue_from CanCan::AccessDenied do |exception|
          restore_previous_path
