@@ -15,7 +15,9 @@ and then run the command
 In your controller action you can save your "location" by using method : 
      
      store_current_path( args = nil )
-args should be an hash wich contains a  :path value and / or  :controller and  :action values, ( mass assign them! )
+args should be an hash wich contains a  :path value and / or  :controller and  :action values,
+     store_current_path( :controller => "your_controller", :action => "your_action" )
+( mass assign them ! )
 If you do not specify a path or url backtracker takes the current one automatically.
 If you're using CanCan gem ( for example ) you can rescue application from an 
 access denied error like this:
